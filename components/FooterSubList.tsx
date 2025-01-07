@@ -3,7 +3,7 @@ interface SubListProps {
     items: string[];
 }
 
-export default function SubList({ title, items }: SubListProps) {
+export default function FooterSubList({ title, items }: SubListProps) {
     return (
         <div className="footer-item py-3">
             <h2 className="footer-item__title text-font--primary text-size--regular font-bold text-weight--bold">{title}</h2>

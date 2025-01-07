@@ -1,10 +1,10 @@
-import SubList from "./SubList";
+import FooterSubList from "./FooterSubList";
 
 const Footer = () => {
     return (
         <footer className="flex flex-col gap-4 items-start md:items-center justify-center bg-gray-950 pt-10">
             <div className="grid grid-cols-1 md:grid-cols-3 text-gray-400">
-                <SubList
+                <FooterSubList
                     title="About"
                     items={[
                         "Our values",
@@ -17,7 +17,7 @@ const Footer = () => {
                         "Queries",
                     ]}
                 />
-                <SubList
+                <FooterSubList
                     title="Quick links"
                     items={[
                         "Knowledge",

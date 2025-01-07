@@ -1,34 +1,42 @@
 "use client";
 
+import { headers } from "next/headers";
 import React from "react";
+import AnimatedButton from "./AnimatedButton";
 
 const NavBar: React.FC = () => {
     const navigationLinks = [
-        { path: "/collections", heading: "Collections" },
         { path: "/shop", heading: "Shop" },
-        { path: "/about", heading: "About" },
-        { path: "/contact", heading: "Contact" },
+        { path: "/bestSellers", heading: "Best Sellers" },
+        { path: "/skinBodycare", heading: "Skin & Body Care" },
+        { path: "/babyCare", heading: "Baby Care" },
+        { path: "/hairCare", heading: "Hair Care" },
+        { path: "/skinInsights", heading: "Skin Insights" },
+        { path: "/trackOrders", heading: "Track Order" },
     ];
     return (
-        <nav className="bg-white shadow-md fixed top-0 w-full z-50">
+        // className="bg-white shadow-md border-slate-600 border-t fixed top-0 w-full z-50"
+        <nav className="bg-white border-slate-300 border-b fixed top-0 w-full lg:w-9/12 z-50">
             <div className="container mx-auto flex items-center justify-between px-4 py-2">
                 {/* Logo */}
                 <div className="flex items-center">
                     <a href="/" className="text-lg font-semibold text-gray-800">
-                        <img src="/logo.svg" alt="Logo" className="h-8" />
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1600px-Zara_Logo.svg.png?20190222225032" alt="Logo" className="h-8" />
                     </a>
                 </div>
 
                 {/* Navigation Links */}
                 <div className="hidden md:flex items-center space-x-6">
+                    {/* <AnimatedButton text="Hover me" additionalProps="font-bold cursor-pointer" /> */}
                     {navigationLinks.map((link, index) => (
-                        <a
-                            key={index}
-                            href={link.path}
-                            className="text-gray-700 hover:text-black transition"
-                        >
-                            {link.heading}
-                        </a>
+                        <AnimatedButton key={index} href={link.path} text={link.heading} additionalProps="cursor-pointer"></AnimatedButton>
+                        // <a
+                        //     key={index}
+                        //     href={link.path}
+                        //     className="text-gray-700 hover:text-black transition"
+                        // >
+                        //     {link.heading}
+                        // </a>
                     ))}
                 </div>
 
@@ -131,6 +139,7 @@ const NavBar: React.FC = () => {
                     Login
                 </a>
             </div>
+            {/* <AnimatedButton text="Hover me" /> */}
         </nav>
     );
 };
