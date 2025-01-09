@@ -1,6 +1,5 @@
 import Shoe1 from "@/components/dashscroller/Shoe1";
 import NavBar from "@/components/NavBar";
-import Image from "next/image";
 
 export default function Home() {
   return (

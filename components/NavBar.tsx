@@ -1,8 +1,9 @@
 "use client";
 
-import { headers } from "next/headers";
 import React from "react";
 import AnimatedButton from "./AnimatedButton";
+import Link from "next/link";
+import Image from "next/image";
 
 const NavBar: React.FC = () => {
     const navigationLinks = [
@@ -19,17 +20,34 @@ const NavBar: React.FC = () => {
         <nav className="bg-white border-slate-300 border-b sticky top-0 w-full lg:w-9/12 z-50">
             <div className="container mx-auto flex items-center justify-between px-4 py-2">
                 {/* Logo */}
-                <div className="flex items-center">
-                    <a href="/" className="text-lg font-semibold text-gray-800">
+                <div className="flex items-start">
+                    <Link
+                        href="/"
+                        className="text-lg font-semibold text-gray-800"
+                    >
                         <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1600px-Zara_Logo.svg.png?20190222225032" alt="Logo" className="h-8" />
-                    </a>
+                        {/* <Image
+                            src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1600px-Zara_Logo.svg.png?20190222225032"
+                            alt="Logo"
+                            className="h-8 object-contain"
+                            fill
+                            // width={100} // Adjust width to match the original image or requirements
+                            // height={700} // Adjust height to match the original image or requirements
+                            priority // Ensures the logo loads quickly (optional)
+                        /> */}
+                    </Link>
                 </div>
 
                 {/* Navigation Links */}
                 <div className="hidden md:flex items-center space-x-6">
                     {/* <AnimatedButton text="Hover me" additionalProps="font-bold cursor-pointer" /> */}
                     {navigationLinks.map((link, index) => (
-                        <AnimatedButton key={index} href={link.path} text={link.heading} additionalProps="cursor-pointer"></AnimatedButton>
+                        <AnimatedButton
+                            key={index}
+                            href={link.path}
+                            text={link.heading}
+                            additionalProps="cursor-pointer"
+                        ></AnimatedButton>
                         // <a
                         //     key={index}
                         //     href={link.path}
