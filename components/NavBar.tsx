@@ -3,7 +3,6 @@
 import React from "react";
 import AnimatedButton from "./AnimatedButton";
 import Link from "next/link";
-import Image from "next/image";
 
 const NavBar: React.FC = () => {
     const navigationLinks = [
