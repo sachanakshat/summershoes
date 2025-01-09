@@ -8,15 +8,15 @@ const NavBar: React.FC = () => {
     const navigationLinks = [
         { path: "/shop", heading: "Shop" },
         { path: "/bestSellers", heading: "Best Sellers" },
-        { path: "/skinBodycare", heading: "Skin & Body Care" },
-        { path: "/babyCare", heading: "Baby Care" },
-        { path: "/hairCare", heading: "Hair Care" },
-        { path: "/skinInsights", heading: "Skin Insights" },
+        { path: "/skinBodycare", heading: "Men Footwear" },
+        { path: "/babyCare", heading: "Women Footwear" },
+        { path: "/hairCare", heading: "Kids Footwear" },
+        { path: "/skinInsights", heading: "Polishes and Accessories" },
         { path: "/trackOrders", heading: "Track Order" },
     ];
     return (
         // className="bg-white shadow-md border-slate-600 border-t fixed top-0 w-full z-50"
-        <nav className="bg-white border-slate-300 border-b fixed top-0 w-full lg:w-9/12 z-50">
+        <nav className="bg-white border-slate-300 border-b sticky top-0 w-full lg:w-9/12 z-50">
             <div className="container mx-auto flex items-center justify-between px-4 py-2">
                 {/* Logo */}
                 <div className="flex items-center">
