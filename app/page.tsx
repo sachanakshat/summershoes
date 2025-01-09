@@ -1,6 +1,5 @@
 import Shoe1 from "@/components/dashscroller/Shoe1";
 import NavBar from "@/components/NavBar";
-import InfiniteScrollingLogosAnimation from "@/components/OurPartners";
 import OurPartners from "@/components/OurPartners";
 
 export default function Home() {
