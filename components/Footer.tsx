@@ -36,11 +36,11 @@ const Footer = () => {
                         <p>
                             Need help fast? Fill out our form or email
                             <br />
-                            help@beminimalist.co
+                            help@aarnafootwear.co
                         </p>
                         <div className="flex flex-row gap-4 justify-center items-start bg-black p-4">
                             <a
-                                href="mailto:help@beminimalist.co"
+                                href="mailto:help@aarnafootwear.co"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -60,7 +60,7 @@ const Footer = () => {
                                 </span>
                             </a>
                             <a
-                                href="https://www.facebook.com/minimalistinc"
+                                href="https://www.facebook.com/aarnafootwear"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -80,7 +80,7 @@ const Footer = () => {
                                 </span>
                             </a>
                             <a
-                                href="https://www.instagram.com/beminimalist__/"
+                                href="https://www.instagram.com/aarnafootwear__/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -100,7 +100,7 @@ const Footer = () => {
                                 </span>
                             </a>
                             <a
-                                href="https://www.youtube.com/@beminimalist"
+                                href="https://www.youtube.com/@summershoes"
                                 target="_blank"
                             >
                                 {/* <span className="visually-hidden">YouTube</span> */}
