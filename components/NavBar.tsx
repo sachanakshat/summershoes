@@ -62,7 +62,7 @@ const NavBar: React.FC = () => {
                             <AnimatedButton
                                 href={link.path}
                                 text={link.heading}
-                                additionalProps="cursor-pointer"
+                                additionalProps="cursor-pointer sm:text-sm lg:text-base"
                             />
                         </div>
                     ))}

@@ -17,7 +17,7 @@ const AnimatedButton: React.FC<AnimatedButtonProps> = ({ text, additionalProps, 
             onHoverEnd={() => setHovered(false)}
         >
             <a href = {href}
-            className={`font-primaryFont sm:text-sm lg:text-base ${additionalProps}`}>
+            className={`font-primaryFont ${additionalProps}`}>
                 {text}
             </a>
             <div className={`border-t border-gray-800 rounded-xl transition-all duration-300 ease-in-out ${hovered ? 'w-full' : 'w-0'}`}></div>
