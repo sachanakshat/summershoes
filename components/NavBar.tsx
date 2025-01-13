@@ -6,6 +6,7 @@ import Link from "next/link";
 
 const NavBar: React.FC = () => {
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
+    const [isDropdownHovered, setDropdownHovered] = useState(false);
 
     const navigationLinks = [
         { path: "/products", heading: "Products", dropdown: ["Shoes", "Bags", "Accessories"] },
@@ -15,8 +16,13 @@ const NavBar: React.FC = () => {
         { path: "/contact", heading: "Contact Us", dropdown: ["Email", "Phone", "Visit Us"] },
     ];
 
+    const shouldShowDropdown = hoveredItem || isDropdownHovered;
+
     return (
-        <nav className="bg-white border-slate-300 border-b sticky top-0 w-full z-50">
+        <nav className="bg-white border-slate-300 border-b sticky top-0 w-full z-50"
+        onMouseLeave={() => {
+            if (!isDropdownHovered) setHoveredItem(null);
+        }}>
             {/* Navbar */}
             <div className="container mx-auto flex items-center justify-between px-4 py-2">
                 {/* Logo */}
@@ -36,7 +42,7 @@ const NavBar: React.FC = () => {
                             key={index}
                             className="relative group"
                             onMouseEnter={() => setHoveredItem(link.heading)}
-                            onMouseLeave={() => setHoveredItem(null)}
+                            
                         >
                             <AnimatedButton
                                 href={link.path}
@@ -78,11 +84,14 @@ const NavBar: React.FC = () => {
             </div>
 
             {/* Dropdown */}
-            {hoveredItem && (
+            {shouldShowDropdown && (
                 <div
-                    className="fixed left-0 right-0 top-[72px] bg-white border-t border-gray-200 shadow-lg z-40"
-                    onMouseEnter={() => setHoveredItem(hoveredItem)}
-                    onMouseLeave={() => setHoveredItem(null)}
+                    className="top-[72px] bg-white border-t border-gray-200 shadow-lg z-40"
+                    onMouseEnter={() => setDropdownHovered(true)}
+                    onMouseLeave={() => {
+                        setDropdownHovered(false);
+                        setHoveredItem(null);
+                    }}
                 >
                     <div className="max-w-screen-xl mx-auto flex flex-wrap py-4 px-8 gap-4">
                         {navigationLinks
