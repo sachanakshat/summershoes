@@ -5,14 +5,22 @@ import AnimatedButton from "./AnimatedButton";
 import Link from "next/link";
 
 const NavBar: React.FC = () => {
+    // const navigationLinks = [
+    //     { path: "/shop", heading: "Shop" },
+    //     { path: "/bestSellers", heading: "Best Sellers" },
+    //     { path: "/skinBodycare", heading: "Men Footwear" },
+    //     { path: "/babyCare", heading: "Women Footwear" },
+    //     { path: "/hairCare", heading: "Kids Footwear" },
+    //     { path: "/skinInsights", heading: "Polishes and Accessories" },
+    //     { path: "/trackOrders", heading: "Track Order" },
+    // ];
+
     const navigationLinks = [
-        { path: "/shop", heading: "Shop" },
-        { path: "/bestSellers", heading: "Best Sellers" },
-        { path: "/skinBodycare", heading: "Men Footwear" },
-        { path: "/babyCare", heading: "Women Footwear" },
-        { path: "/hairCare", heading: "Kids Footwear" },
-        { path: "/skinInsights", heading: "Polishes and Accessories" },
-        { path: "/trackOrders", heading: "Track Order" },
+        { path: "/products", heading: "Products" },
+        {path: "/about", heading: "About Us"},
+        { path: "/mission", heading: "Our Mission" },
+        { path: "/testimonials", heading: "Testimonials" },
+        { path: "/contact", heading: "Contact Us" },
     ];
     return (
         // className="bg-white shadow-md border-slate-600 border-t fixed top-0 w-full z-50"
@@ -24,7 +32,7 @@ const NavBar: React.FC = () => {
                         href="/"
                         className="text-lg font-semibold text-gray-800"
                     >
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1600px-Zara_Logo.svg.png?20190222225032" alt="Logo" className="h-8" />
+                        <img src="/logos/aarna_color.png" alt="Logo" className="h-20" />
                         {/* <Image
                             src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Zara_Logo.svg/1600px-Zara_Logo.svg.png?20190222225032"
                             alt="Logo"
@@ -46,7 +54,7 @@ const NavBar: React.FC = () => {
                             href={link.path}
                             text={link.heading}
                             additionalProps="cursor-pointer"
-                        ></AnimatedButton>
+                        />
                         // <a
                         //     key={index}
                         //     href={link.path}

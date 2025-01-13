@@ -36,11 +36,11 @@ const Footer = () => {
                         <p>
                             Need help fast? Fill out our form or email
                             <br />
-                            help@aarnafootwear.co
+                            help@aarnafootcare.co
                         </p>
                         <div className="flex flex-row gap-4 justify-center items-start bg-black p-4">
                             <a
-                                href="mailto:help@aarnafootwear.co"
+                                href="mailto:help@aarnafootcare.co"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -60,7 +60,7 @@ const Footer = () => {
                                 </span>
                             </a>
                             <a
-                                href="https://www.facebook.com/aarnafootwear"
+                                href="https://www.facebook.com/aarnafootcare"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >
@@ -80,7 +80,7 @@ const Footer = () => {
                                 </span>
                             </a>
                             <a
-                                href="https://www.instagram.com/aarnafootwear__/"
+                                href="https://www.instagram.com/aarnafootcare__/"
                                 target="_blank"
                                 rel="noopener noreferrer"
                             >

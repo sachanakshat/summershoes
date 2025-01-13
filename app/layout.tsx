@@ -3,7 +3,7 @@ import "./globals.css";
 import Footer from "@/components/Footer";
 
 export const metadata: Metadata = {
-    title: "Aarna Footwear",
+    title: "Aarna Footcare",
     description: "2025",
 };
 
