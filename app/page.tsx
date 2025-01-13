@@ -1,6 +1,8 @@
+import ContactUsCard from "@/components/ContactUsCard";
 import Shoe1 from "@/components/dashscroller/Shoe1";
 
 import OurPartners from "@/components/OurPartners";
+import ProductsCard from "@/components/ProductsCard";
 
 export default function Home() {
     return (

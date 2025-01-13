@@ -3,26 +3,42 @@
 import React, { useState } from "react";
 import AnimatedButton from "./AnimatedButton";
 import Link from "next/link";
+import ContactUsCard from "@/components/ContactUsCard";
+import ProductsCard from "@/components/ProductsCard";
 
 const NavBar: React.FC = () => {
     const [hoveredItem, setHoveredItem] = useState<string | null>(null);
     const [isDropdownHovered, setDropdownHovered] = useState(false);
 
     const navigationLinks = [
-        { path: "/products", heading: "Products", dropdown: ["Shoes", "Bags", "Accessories"] },
+        { path: "/products", heading: "Products", dropdown: [] },
         { path: "/about", heading: "About Us", dropdown: [] },
         { path: "/mission", heading: "Our Mission", dropdown: [] },
         { path: "/testimonials", heading: "Testimonials", dropdown: [] },
-        { path: "/contact", heading: "Contact Us", dropdown: ["Email", "Phone", "Visit Us"] },
+        { path: "/contact", heading: "Contact Us", dropdown: [] },
     ];
 
     const shouldShowDropdown = hoveredItem || isDropdownHovered;
 
+    // Render the appropriate card based on the hovered item
+    const renderCard = () => {
+        switch (hoveredItem) {
+            case "Products":
+                return <ProductsCard />;
+            case "Contact Us":
+                return <ContactUsCard />;
+            default:
+                return null;
+        }
+    };
+
     return (
-        <nav className="bg-white border-slate-300 border-b sticky top-0 w-full z-50"
-        onMouseLeave={() => {
-            if (!isDropdownHovered) setHoveredItem(null);
-        }}>
+        <nav
+            className="bg-white border-slate-300 border-b sticky top-0 w-full z-50"
+            onMouseLeave={() => {
+                if (!isDropdownHovered) setHoveredItem(null);
+            }}
+        >
             {/* Navbar */}
             <div className="container mx-auto flex items-center justify-between px-4 py-2">
                 {/* Logo */}
@@ -42,7 +58,6 @@ const NavBar: React.FC = () => {
                             key={index}
                             className="relative group"
                             onMouseEnter={() => setHoveredItem(link.heading)}
-                            
                         >
                             <AnimatedButton
                                 href={link.path}
@@ -94,17 +109,8 @@ const NavBar: React.FC = () => {
                     }}
                 >
                     <div className="max-w-screen-xl mx-auto flex flex-wrap py-4 px-8 gap-4">
-                        {navigationLinks
-                            .find((link) => link.heading === hoveredItem)
-                            ?.dropdown.map((item, idx) => (
-                                <a
-                                    key={idx}
-                                    href={`/${item.toLowerCase().replace(/\s+/g, "-")}`}
-                                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
-                                >
-                                    {item}
-                                </a>
-                            ))}
+                        {/* Render card dynamically */}
+                        {renderCard()}
                     </div>
                 </div>
             )}
