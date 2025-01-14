@@ -36,7 +36,7 @@ export default function ProductsCard() {
             <div className="flex items-center">
                 <div className="relative top-0">
                     <AnimatedButton
-                        text={"Men's Footwear"}
+                        text={"Men\'s Footwear"}
                         additionalProps="cursor-pointer font-bold py-2"
                     />
                     {/* <h4 className="text-font--primary text-size--regular font-bold py-2">
@@ -56,7 +56,7 @@ export default function ProductsCard() {
                 </div>
                 <div className="px-5 relative top-0 sm:top-0 sm:left-0">
                     <AnimatedButton
-                        text={"Women's Footwear"}
+                        text={"Women\'s Footwear"}
                         additionalProps="cursor-pointer font-bold py-2"
                     />
 
@@ -70,7 +70,7 @@ export default function ProductsCard() {
                     ))}
 
                     <AnimatedButton
-                        text={"Kid's Footwear"}
+                        text={"Kid\'s Footwear"}
                         additionalProps="cursor-pointer font-bold py-2"
                     />
 
