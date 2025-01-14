@@ -78,7 +78,7 @@ const NavBar: React.FC = () => {
                     </a>
                     <a
                         href="/cart"
-                        className="text-gray-800 hover:text-black transition"
+                        className="hidden md:block text-gray-800 hover:text-black transition"
                     >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
@@ -96,6 +96,51 @@ const NavBar: React.FC = () => {
                         </svg>
                     </a>
                 </div>
+                {/* Mobile Menu Toggle */}
+                <button
+                        className="md:hidden focus:outline-none"
+                        onClick={() => {
+                            document
+                                .getElementById("mobileMenu")
+                                ?.classList.toggle("hidden");
+                        }}
+                    >
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            className="h-6 w-6"
+                            fill="none"
+                            viewBox="0 0 24 24"
+                            stroke="currentColor"
+                        >
+                            <path
+                                strokeLinecap="round"
+                                strokeLinejoin="round"
+                                strokeWidth={2}
+                                d="M4 6h16M4 12h16m-7 6h7"
+                            />
+                        </svg>
+                    </button>
+            </div>
+            {/* Mobile Menu */}
+            <div
+                id="mobileMenu"
+                className="hidden md:hidden bg-white shadow-md px-4 py-2"
+            >
+                {navigationLinks.map((link, index) => (
+                    <a
+                        key={index}
+                        href={link.path}
+                        className="block py-2 text-gray-700 hover:text-black transition"
+                    >
+                        {link.heading}
+                    </a>
+                ))}
+                <a
+                    href="/login"
+                    className="block py-2 text-gray-700 hover:text-black transition"
+                >
+                    Login
+                </a>
             </div>
 
             {/* Dropdown */}

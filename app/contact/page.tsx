@@ -1,8 +1,8 @@
-import AnimatedButton from "./AnimatedButton";
+import AnimatedButton from "@/components/AnimatedButton";
 
-export default function ContactUsCard() {
+export default function ContactPage() {
     return (
-        <div className="flex flex-col sm:flex-row justify-between items-center w-full">
+        <div className="flex flex-col sm:flex-row justify-between items-center w-full p-4 md:py-40">
             <iframe
                 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3549.260732877645!2d78.0035756116235!3d27.179540876391084!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x397477b2761285f9%3A0x601236b6fb67fce0!2sAARNA%20FOOTCARE!5e0!3m2!1sen!2sin!4v1736840152973!5m2!1sen!2sin"
                 className="w-full h-full border-0"
@@ -11,7 +11,7 @@ export default function ContactUsCard() {
                 referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
             {/* <img src="/assets/aarna-map.png" alt="shoe1" className="w-3/5" /> */}
-            <div className="flex flex-col items-start px-4">
+            <div className="flex flex-col items-start p-4">
                 <AnimatedButton
                     text={"Address"}
                     additionalProps="cursor-pointer text-lg font-bold"
@@ -113,6 +113,7 @@ export default function ContactUsCard() {
                                 </span>
                             </a>
                         </div>
+                {/* <div>This is the ContactUs component</div> */}
             </div>
         </div>
     );
