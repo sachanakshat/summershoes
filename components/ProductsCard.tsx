@@ -120,7 +120,7 @@ export default function ProductsCard() {
                     New Launch: Air Jordan 5 Dark Concord
                 </h4>
                 <p className="text-font--primary text-size--regular py-2">
-                    Series' best comfort and mobility
+                    Series best comfort and mobility
                 </p>
             </div>
         </div>
