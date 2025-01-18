@@ -1,5 +1,6 @@
 import AboutCardLanding from "@/components/AboutCardLanding";
-import Shoe1 from "@/components/dashscroller/Shoe1";
+// import Shoe1 from "@/components/dashscroller/Shoe1";
+import ManufacturingCardLanding from "@/components/ManufacturingCardLanding";
 import OurPartners from "@/components/OurPartners";
 import ProductsCardLanding from "@/components/ProductsCardLanding";
 
@@ -21,15 +22,17 @@ export default function Home() {
             </div>
             <AboutCardLanding />
             <ProductsCardLanding />
+            <OurPartners />
+            <ManufacturingCardLanding />
             
             
             {/* Scrollable Section */}
-            <div className="w-screen snap-x snap-mandatory overflow-x-scroll">
+            {/* <div className="w-screen snap-x snap-mandatory overflow-x-scroll">
                 <Shoe1 />
                 <Shoe1 />
-                <OurPartners />
                 
-            </div>
+                
+            </div> */}
         </div>
     );
 }

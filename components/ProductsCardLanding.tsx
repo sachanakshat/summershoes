@@ -9,10 +9,10 @@ export default function Products() {
     const [index, setIndex] = useState(0);
     const productImages = [
         "/assets/air-jordan-5.png",
-        "/assets/air-jordan-5.png",
+        "/dashscroller/shoe1.jpg",
         "/assets/air-jordan-5.png",
         "/dashscroller/shoe1.jpg",
-        "/dashscroller/shoe1.jpg",
+        "/assets/air-jordan-5.png",
         "/dashscroller/shoe1.jpg",
     ];
 
@@ -53,7 +53,7 @@ export default function Products() {
             </p>
 
             {/* Scrollable Product Tiles */}
-            <div className="relative w-full max-w-[90%] overflow-hidden">
+            <div className="relative w-full max-w-[90%]">
                 {/* Left Scroll Button */}
                 <button 
                     onClick={() => scroll("left")} 
@@ -63,11 +63,11 @@ export default function Products() {
                 </button>
 
                 {/* Product Tiles Container with Framer Motion */}
-                <div className="overflow-hidden">
+                <div className="overflow-x-scroll scrollbar-hide">
                     <AnimatePresence mode="wait">
                         <motion.div
                             key={index}
-                            className="flex w-full justify-center items-center"
+                            className="flex w-full flex-nowrap justify-center items-center gap-4"
                             initial={{ opacity: 0, x: 50 }}
                             animate={{ opacity: 1, x: 0 }}
                             exit={{ opacity: 0, x: -50 }}
@@ -76,13 +76,13 @@ export default function Products() {
                             {productImages
                                 .slice(index * imagesPerSet, (index + 1) * imagesPerSet)
                                 .map((src, idx) => (
-                                    <div key={idx} className="w-[250px] h-[180px] sm:w-[280px] sm:h-[200px] mx-2">
+                                    <div key={idx} className="w-[250px] sm:w-[280px] flex-shrink-0">
                                         <Image
                                             src={src}
                                             alt={`Product ${idx + 1}`}
                                             width={280}
                                             height={200}
-                                            className="rounded-lg shadow-md object-cover"
+                                            className="rounded-lg shadow-md object-contain w-full h-auto"
                                         />
                                     </div>
                                 ))}

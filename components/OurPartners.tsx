@@ -48,7 +48,10 @@ const CompanyLogoData: Array<{ src: string; alt: string }> = [
 
 export default function OurPartners() {
     return (
-        <div className="">
+        <div className="w-screen snap-x snap-mandatory overflow-x-scroll">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4 text-center">
+                Our Partners
+            </h2>
             <h2 className="text-center text-xl text-black/70 my-5">
                 Trusted by the world&apos;s most innovative companies
             </h2>
