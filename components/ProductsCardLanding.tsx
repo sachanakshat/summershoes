@@ -7,14 +7,6 @@ import { useMediaQuery } from "react-responsive";
 
 export default function Products() {
     const [index, setIndex] = useState(0);
-    // const productImages = [
-    //     "/assets/air-jordan-5.png",
-    //     "/dashscroller/shoe1.jpg",
-    //     "/assets/air-jordan-5.png",
-    //     "/dashscroller/shoe1.jpg",
-    //     "/assets/air-jordan-5.png",
-    //     "/dashscroller/shoe1.jpg",
-    // ];
     const productImages = [
         "/assets/air-jordan-5.png",
         "/assets/air-jordan-3.png",
@@ -28,7 +20,6 @@ export default function Products() {
     const isSmall = useMediaQuery({ maxWidth: 640 });
     const isMedium = useMediaQuery({ maxWidth: 1024 });
     const imagesPerSet = isSmall ? 1 : isMedium ? 2 : 3;
-
     const totalSets = Math.ceil(productImages.length / imagesPerSet);
 
     // Auto-scroll every 3 seconds
@@ -48,7 +39,7 @@ export default function Products() {
     };
 
     return (
-        <div className="flex flex-col items-center w-full max-w-7xl mx-auto px-4 py-10 pb-44">
+        <div className="flex flex-col items-center w-full max-w-7xl mx-auto px-4 py-10">
             {/* Heading */}
             <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">
                 PRODUCTS
@@ -84,13 +75,16 @@ export default function Products() {
                             {productImages
                                 .slice(index * imagesPerSet, (index + 1) * imagesPerSet)
                                 .map((src, idx) => (
-                                    <div key={idx} className="w-[250px] sm:w-[280px] flex-shrink-0">
+                                    <div 
+                                        key={idx} 
+                                        className="w-[250px] sm:w-[280px] h-[240px] flex-shrink-0 relative"
+                                    >
                                         <Image
                                             src={src}
                                             alt={`Product ${idx + 1}`}
-                                            width={280}
-                                            height={200}
-                                            className="rounded-lg shadow-md object-contain w-full h-auto"
+                                            layout="fill"
+                                            objectFit="cover"
+                                            className="rounded-lg shadow-md"
                                         />
                                     </div>
                                 ))}
