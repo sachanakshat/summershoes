@@ -7,13 +7,21 @@ import { useMediaQuery } from "react-responsive";
 
 export default function Products() {
     const [index, setIndex] = useState(0);
+    // const productImages = [
+    //     "/assets/air-jordan-5.png",
+    //     "/dashscroller/shoe1.jpg",
+    //     "/assets/air-jordan-5.png",
+    //     "/dashscroller/shoe1.jpg",
+    //     "/assets/air-jordan-5.png",
+    //     "/dashscroller/shoe1.jpg",
+    // ];
     const productImages = [
         "/assets/air-jordan-5.png",
-        "/dashscroller/shoe1.jpg",
+        "/assets/air-jordan-3.png",
+        "/assets/air-jordan-5-golden.png",
+        "/assets/air-jordan-11.png",
         "/assets/air-jordan-5.png",
-        "/dashscroller/shoe1.jpg",
-        "/assets/air-jordan-5.png",
-        "/dashscroller/shoe1.jpg",
+        "/assets/air-jordan-3.png",
     ];
 
     // Determine number of images per screen based on screen size
